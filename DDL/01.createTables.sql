@@ -22,7 +22,7 @@ GO
 
 CREATE TABLE [dbo].[profesion](
 	[id] [int] NOT NULL,
-	[ocupacion] [nchar](10) NULL,
+	[ocupacion] [varchar](100) NULL,
  CONSTRAINT [PK_profesion] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
