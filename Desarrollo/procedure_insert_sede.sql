@@ -1,4 +1,3 @@
-use turnos;
 
 CREATE PROCEDURE dbo.spINSERT_dbo_sedes @id int, @descripcion varchar(100)
 
@@ -16,12 +15,3 @@ INSERT INTO [dbo].[sedes]
            ,@descripcion
            )
 GO
-
-
-/*
-EXECUTE [dbo].[spINSERT_dbo_sedes] 
-   @id = 1,
-	@descripcion = 'la maquinita'
- 
-GO
-*/
