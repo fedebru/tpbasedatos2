@@ -1,16 +1,13 @@
-USE [turnos]
-GO
-
-
 CREATE TABLE [dbo].[turno](
 	[id] [int] NOT NULL,
 	[hora_inicio] [datetime] NULL,
 	[hora_fin] [datetime] NULL,
-	[dia] [date] NULL,
+	[dia] [datetime] NULL,
  CONSTRAINT [PK_turnos] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 ))
+GO
 
 CREATE TABLE [dbo].[paciente](
 	[nombre] [varchar](100) NULL,
@@ -21,8 +18,7 @@ CREATE TABLE [dbo].[paciente](
 (
 	[id] ASC
 ))
-
-
+GO
 
 CREATE TABLE [dbo].[profesion](
 	[id] [int] NOT NULL,
@@ -31,7 +27,7 @@ CREATE TABLE [dbo].[profesion](
 (
 	[id] ASC
 ))
-
+GO
 
 CREATE TABLE [dbo].[profesional](
 	[id] [int] NOT NULL,
@@ -42,7 +38,7 @@ CREATE TABLE [dbo].[profesional](
 (
 	[id] ASC
 ))
-
+GO
 ALTER TABLE [dbo].[profesional]  WITH CHECK ADD  CONSTRAINT [FK_profesional_profesion] FOREIGN KEY([profesion_id])
 REFERENCES [dbo].[profesion] ([id])
 GO
@@ -54,7 +50,7 @@ CREATE TABLE [dbo].[sedes](
 	[id] [int] NOT NULL,
 	[descripcion] [varchar](100) NULL
 ) ON [PRIMARY]
-
+GO
 
 CREATE TABLE [dbo].[servicio](
 	[id] [int] NOT NULL,
