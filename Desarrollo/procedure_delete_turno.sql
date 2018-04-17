@@ -6,8 +6,7 @@ SET NOCOUNT ON
 
 DELETE FROM [dbo].[turno]
          WHERE
-           (@id
-		              )
+           (id =@id)
 GO
 
 /*
